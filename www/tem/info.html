@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi">
+<link rel="stylesheet" href="../common/css/base.css">
+<link rel="stylesheet" href="../css/tem/info.css">
+<script src="../cordova.js"></script>
+<script src="../common/js/zepto.js"></script>
+<script src="../common/js/base.js"></script>
+<script src="../js/tem/info.js"></script>
+</head>
+<body>
+	<header id="fixed">
+        <div></div><h1>队长信息</h1><div onClick="logout()"><img src="../img/ot.png" width="40%"></div>
+    </header>
+    <article>
+        <img id="pic" src="../img/hd.png" width="30%">
+        <header>
+        	<output id="uname"></output><br>
+        	<output id="name" class="color"></output><br><br>
+            <button type="button" id="activities">我的活动<img src="../img/nx.png"></button>
+        </header>
+    </article>
+    <section>
+    	<ul>
+        	<li><span>所属协会</span><div><output id="asso"></output></div></li>
+            <li><span>所属中心</span><div><output id="team"></output></div></li>
+            <li><span>所属队伍</span><div><output id="squad"></output></div></li>
+        </ul>
+    </section>
+</body>
+</html>

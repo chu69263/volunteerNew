@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi">
+<link rel="stylesheet" href="../common/css/base.css">
+<link rel="stylesheet" href="../css/index.css">
+<link rel="stylesheet" href="../css/vol/activity.css">
+<script src="../cordova.js"></script>
+<script src="../common/js/zepto.js"></script>
+<script src="../common/js/base.js"></script>
+<script src="../js/vol/activity.js"></script>
+</head>
+<body>
+	<header id="fixed">
+        <div onClick="goBack()">&lt;</div><h1>活动详情</h1><div id="join">报名</div>
+    </header>
+    <article>
+    	<img src="../img/ai.png" width="14%">
+        <header>
+    		<h2 id="title"></h2>
+            <div>
+        		报名开始：<output id="time1"></output><br>
+        		报名截止：<output id="time2"></output><br>
+                报名人数：<output id="participate"></output>&nbsp;人<br>
+                报名详情：<output id="detail"></output>
+            </div>
+        </header>
+    </article>
+    <section>
+    	<ul>
+            <li><span>联系人</span><div><output id="contact"></output></div></li>
+        	<li><span>联系方式</span><div><output id="phone"></output></div></li>
+            <li><span>所属中心</span><div><output id="team"></output></div></li>
+            <li><span>所属队伍</span><div><output id="squad"></output></div></li>
+            <li><span>招募地点</span><div><output id="recruit"></output></div></li>
+            <li><span>岗位要求</span><div><output id="claim"></output></div></li>
+            <li></li><li></li>
+            <li><span>服务类型</span><div><output id="type"></output></div></li>
+            <li><span>活动人数</span><div><output id="number"></output>&nbsp;人</div></li>
+			<li><span>活动时间</span><div><output id="date"></output></div></li>
+            <li><span>活动地点</span><div><output id="location"></output></div></li>
+            <li><span>活动时长</span><div><output id="long"></output>&nbsp;小时</div></li>
+            <li><span>状态</span><div><output id="status"></output></div></li>
+            <li><span>活动内容</span><div><output id="content"></output></div></li>
+            <li><span>附件</span><div><a id="attachment" href="#">无附件</a></div></li>
+        </ul>
+    </section>
+    <section id="comment">
+        <h2>留言/评论</h2>
+        <ul></ul>
+        <textarea maxlength="200" placeholder="请用200文字以内留言/评论" rows="4"></textarea>
+        <button type="button" id="commit" class="main"><img src="../img/ct.png">提 交</button>
+    </section>
+    <nav>
+        <ul>
+            <li id="home"><img src="../img/home.png"><br>首&nbsp;页</li>
+            <li id="news"><img src="../img/news.png"><br>新&nbsp;闻</li>
+            <li id="activity"><img src="../img/activity.png"><br>活&nbsp;动</li>
+            <li id="help"><img src="../img/help.png"><br>求&nbsp;助</li>
+            <li id="login"><img src="../img/login.png"><br>登&nbsp;录</li>
+        </ul>
+    </nav>
+</body>
+</html>

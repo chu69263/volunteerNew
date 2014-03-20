@@ -1,0 +1,47 @@
+img[alt='logo'] {
+	margin: 0 auto;
+	display: block;
+}
+
+button {
+    width: 49.3%;
+}
+
+button[class='main'] {
+	width: 100%;
+}
+
+article {
+	padding-top: 7em;
+	padding-bottom: 5em;
+}
+
+article div {
+	text-align: center;
+	margin-bottom: 2.4em;
+}
+
+.checked,.unchecked {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	background: url(../img/ro.png) no-repeat;
+	background-position: -1em 0;
+	background-size: 2em;
+}
+
+.unchecked {
+	background-position: 0 0;
+}
+
+.gap {
+	padding-left: 0.5em;
+}
+
+footer {
+	width: 100%;
+	position: fixed;
+	bottom: 0.7em;
+	text-align: center;
+	font-size: 1.5em;
+}

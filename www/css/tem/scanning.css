@@ -1,0 +1,40 @@
+section {
+	padding: 3em;
+}
+
+section div {
+	color: #ccc;
+	text-align: center;
+	background-color: #222326;
+	-webkit-border-radius: 0.2em;
+	padding-top: 4em;
+}
+
+section div #pic {
+	display: block;
+	margin: 0 auto;
+	-webkit-border-radius: 20em;
+	-webkit-box-shadow: 0 0.2em 5px #000;
+}
+
+section div span {
+	color: #ccc;
+	display: block;
+	font-size: 2.4em;
+	padding: 1.2em 0;
+	line-height: 1.5em;
+}
+
+section div span output {
+	font-size: 1em;
+}
+
+section div button {
+	width: 50%;
+	margin: 0;
+}
+
+section div button img {
+	margin-left: 0;
+	margin-right: 1em;
+}

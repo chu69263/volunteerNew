@@ -1,0 +1,20 @@
+needAskLogout = false;
+$(function() {
+	var ul = $("article ul").html("");
+	ajaxGet(volService + "Participate", { id: getUser() }, function(data) {
+		var d = XML2JSON(data);
+		for (var i = 0, arr; arr = d[i++];)
+			ul.append("<li id='a_" + arr[0] + "'><span>" + arr[1] + "<br><span>" + arr[3] + "</span><span>时长：" + arr[2] + "小时</span></span></li>");
+	});
+	
+	ul.click(function(e) {
+        var tag = e.target;
+		if (tag.nodeName.toUpperCase() !== "LI") {
+			while (tag.parentNode.nodeName.toUpperCase() !== "LI") tag = tag.parentNode;
+			tag = tag.parentNode;
+		}
+		setItem("activity_id", tag.id);
+		setItem("activity_had", true);
+		redirect("activity.html");
+    });
+})

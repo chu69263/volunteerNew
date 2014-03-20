@@ -1,0 +1,87 @@
+section {
+    padding: 6.7em 0 11em 0;
+}
+
+section article {
+    margin-bottom: 0.5em;
+    padding: 1em 1.2em;
+    background-color: #222326;
+}
+
+section article h2 {
+    padding-left: 1.7em;
+    text-align: left;
+	width: 100%;
+	background: url(../img/ht.png) no-repeat;
+	background-position: 0 0.3em;
+	background-size: 1.2em;
+}
+
+section article ul li {
+	padding: 0.7em 1em;
+}
+
+section article ul li span,section article ul li nobr {
+    display: inline-block;
+    font-size: 2em;
+    height: 1em;
+    line-height: 1em;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+section article ul[id] li nobr {
+    width: 68%;
+}
+
+section article ul[id] li span {
+    width: 32%;
+    font-size: 1.8em;
+    text-align: right;
+    color: #ccc;
+}
+
+section article ul[name] li {
+	padding: 0;
+	margin: 0.5em 1.5em;
+	float: left;
+	width: 36%;
+	height: 2.3em;
+	overflow: hidden;
+	font-size: 2em;
+	text-align: center;
+	background: url(../img/hht.png) no-repeat;
+	background-position: center center;
+	background-size: 4em;
+}
+
+nav {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	-webkit-box-shadow: 0 -0.2em 5px #000;
+}
+
+nav ul li {
+	float: left;
+	background-color: #1a1a1e;
+	width: 20%;
+	font-size: 2.4em;
+	text-align: center;
+	padding: 0.7em 0;
+    border-left: #2b2c2f solid 0.06em;
+    border-right: #2b2c2f solid 0.06em;
+}
+
+nav ul li:first-child {
+	border-left: 0;
+}
+
+nav ul li:last-child {
+	border-right: 0;
+}
+
+nav ul li img {
+    height: 3.5em;
+    margin-bottom: 0.7em;
+}
