@@ -47,11 +47,14 @@ function picError(message) {
 function uploadImage(uri) {
 	good(uri);
 	var ops = new FileUploadOptions();
+	good("1:"+JSON.stringify(ops));
 	ops.fileKey = "file";
 	ops.fileName = uri.substr(uri.lastIndexOf('/') + 1);
 	ops.mimeType = "image/jpeg";
 	ops.chunkedMode = false;
+	good("2:"+JSON.stringify(ops));
 	var ft = new FileTransfer();
+	good("3:"+JSON.stringify(ops));
 	ft.upload(uri, encodeURI(volService + "UploadFile"), uploadSuccess,
 			uploadFail, ops);
 	good(JSON.stringify(ops));
