@@ -22,6 +22,9 @@
   <preference name="ios-statusbarstyle" value="black-opaque" />
   <preference name="detect-data-types" value="false" />
   <preference name="exit-on-suspend" value="true" />
+  <preference name="UIStatusBarHidden" value="true" />
+	<preference name="UIViewControllerBasedStatusBarAppearance"
+		value="false" />
   <!-- Android -->
   <preference name="android-minSdkVersion" value="11" />
   <preference name="android-targetSdkVersion" value="15" />
@@ -51,6 +54,7 @@
   <!-- Access -->
   <access origin="http://www.vasx.org" />
   <access origin="http://web.happylearn.net" />
+  <access origin="http://192.168.1.16" />
   <!-- Build -->
   <gap:platform name="ios" />
   <gap:platform name="android" />

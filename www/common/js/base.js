@@ -1,5 +1,5 @@
 window.win = window, win.doc = win.document, win.sess = win.sessionStorage, win.stag = win.localStorage;
-win.serviceHost = "http://web.happylearn.net/", win.fileHost = "http://www.vasx.org/Module/";
+win.serviceHost = "http://192.168.1.16:85/", win.fileHost = "http://www.vasx.org/Module/";
 win.volService = serviceHost + "VolunteerWebService.asmx/", win.temService = serviceHost + "TeamWebService.asmx/", win.nwsService = serviceHost + "NewsWebService.asmx/", win.hlpService = serviceHost + "HelpWebService.asmx/";
 win.skinPath = fileHost + "FilesUp/UserIcon/", win.filePath = fileHost + "FilesUp/Project/";
 win.needAskExit = undefined, win.needAskLogout = undefined;
@@ -61,7 +61,7 @@ win.appExit = function() {
 }
 
 win.logout = function() {
-	confirm("您真的要注销用户吗？", function(btn) { btn === 1 && (sess.clear(), goBack()); }, "提 示", "是,否");
+	confirm("您真的要注销用户吗？", function(btn) { btn === 1 && (sess.clear(), redirect("../login.html")); }, "提 示", "是,否");
 }
 
 win.getId = function(id, g) {
@@ -70,9 +70,13 @@ win.getId = function(id, g) {
 	return id.substring(g, id.length);
 }
 
-win.ajaxGet = function(url, data, func, sync) {
+win.ajaxGet = function(url, data, func, sync, type) {
+	var mType = "GET";
+	if(type != undefined && type != null){
+			mType = type;
+	}
 	$.ajax({
-		"type": "GET",
+		"type": mType,
 		"url": url,
 		"data": data,
 		"dataType": "xml",

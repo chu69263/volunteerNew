@@ -35,7 +35,7 @@ ul {
 	list-style: none;
 }
 
-textarea,input[type='text'],input[type='password'],select {
+textarea,input[type='text'],input[type='password'],select,input[type='date'],input[type='number'] {
 	border: 0;
 	-webkit-border-radius: 0.2em;
 	width: 100%;
