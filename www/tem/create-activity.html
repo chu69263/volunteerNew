@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport"
+	content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi">
+<link rel="stylesheet" href="../common/css/base.css">
+<link rel="stylesheet" href="../css/tem/activities.css">
+<link rel="stylesheet" href="../css/help.css">
+<script src="../cordova.js"></script>
+<script src="../common/js/zepto.js"></script>
+<script src="../common/js/base.js"></script>
+<script src="../js/tem/create.js"></script>
+</head>
+<body>
+	<header id="fixed">
+		<div onClick="goBack()">&lt;</div>
+		<h1>创建活动</h1>
+		<div></div>
+	</header>
+	<section>
+		<ul>
+			<li><span>活动名称</span>
+				<div>
+					<input id="txt_title" type="text">
+				</div></li>
+			<li><span>活动类别</span>
+				<div>
+					<select id="sel_type">
+					</select>
+				</div></li>
+			<li><span>活动地点</span>
+				<div>
+					<input id="txt_address" type="text">
+				</div></li>
+			<li><span>活动人数</span>
+				<div>
+					<input id="txt_people" type="number" value="10">
+				</div></li>
+			<li><span>活动内容</span>
+				<div>
+					<textarea id="txt_content" rows="3"></textarea>
+				</div></li>
+			<li><span>活动开始</span>
+				<div>
+					<input id="txt_start_date" type="date" placeholder="yyyy-MM-dd">
+				</div></li>
+			<li><span>报名截止</span>
+				<div>
+					<input id="txt_end_date" type="date" placeholder="yyyy-MM-dd">
+				</div></li>
+			<li><span>时长/小时</span>
+				<div>
+					<input id="txt_time" type="number" value="2">
+				</div></li>
+			<li><span style="color: red;">注意事项</span>
+				<div style="color: #CC33CC">
+					1.项目时长和项目人数必须是是<font style="color: red">整数</font><br>2.报名截止日期必须<font
+						style="color: red">小于</font>项目开展日期
+				</div></li>
+			<li><span>联系人</span>
+				<div>
+					<input id="txt_contact" type="text">
+				</div></li>
+			<li><span>联系方式</span>
+				<div>
+					<input id="txt_contact_phone" type="text">
+				</div></li>
+		</ul>
+		<button type="button" id="commit" class="main">
+			<img src="../img/ct.png" width="30" height="25">提 交
+		</button>
+	</section>
+</body>
+</html>
