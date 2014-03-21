@@ -14,4 +14,7 @@ $(function() {
 		var tag = e.target;
         redirect((tag.nodeName.toUpperCase() === "IMG" ? tag.parentNode.id : tag.id) + "-manager.html");
     });
+	$("#add-news").click(function(){
+		redirect("add-news.html");
+	});
 });
