@@ -34,7 +34,8 @@ function parseContent() {
 	return h;
 }
 function getpic() {
-	good(nav.camera);
+	good(nav);
+	good(JSON.stringify(nav));
 	nav.camera.getPicture(uploadImage, picError, {
 		sourceType : nav.camera.PictureSourceType.SAVEDPHOTOALBUM,
 		destinationType : nav.camera.DestinationType.FILE_URL
