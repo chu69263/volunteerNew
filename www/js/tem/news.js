@@ -45,6 +45,7 @@ function picError(message) {
 }
 
 function uploadImage(uri) {
+	good(uri);
 	var ops = new FileUploadOptions();
 	ops.fileKey = "file";
 	ops.fileName = uri.substr(uri.lastIndexOf('/') + 1);
@@ -53,9 +54,11 @@ function uploadImage(uri) {
 	var ft = new FileTransfer();
 	ft.upload(uri, encodeURI(volService + "UploadFile"), uploadSuccess,
 			uploadFail, ops);
+	good(JSON.stringify(ops));
 }
 
 function uploadSuccess(result) {
+	good(result);
 	var resp = result.response.substr(result.response.lastIndexOf("<string"));
 	var start = resp.indexOf(">");
 	var end = resp.lastIndexOf("</string>");
