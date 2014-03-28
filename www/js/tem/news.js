@@ -41,7 +41,7 @@ function getpic() {
 }
 
 function picError(message) {
-	// sorry(message);
+	sorry(message);
 }
 
 function uploadImage(uri) {

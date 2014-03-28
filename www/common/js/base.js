@@ -61,7 +61,7 @@ win.appExit = function() {
 }
 
 win.logout = function() {
-	confirm("您真的要注销用户吗？", function(btn) { btn === 1 && (sess.clear(), redirect("../login.html")); }, "提 示", "是,否");
+	confirm("您确定要退出登录吗？", function(btn) { btn === 1 && (sess.clear(), redirect("../login.html")); }, "提 示", "是,否");
 }
 
 win.getId = function(id, g) {

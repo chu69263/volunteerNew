@@ -1,5 +1,8 @@
 needAskLogout = false;
 $(function() {
+	$("#txt_start_date").on('change',function(){
+		$("#txt_end_date").val($(this).val());
+	});
 	$("#commit").click(function() {
 		var title = $("#txt_title").val();
 		var type = "";
