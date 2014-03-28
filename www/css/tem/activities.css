@@ -50,6 +50,7 @@ article ul li button img {
 }
 footer {
 	position: fixed;
+	background-color: #2b2c2f;
 	bottom: 0;
 	width: 100%;
 	-webkit-box-shadow: 0 -2px 5px #000;
