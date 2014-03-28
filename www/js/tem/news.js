@@ -41,7 +41,7 @@ function getpic() {
 }
 
 function picError(message) {
-	sorry(message);
+	// sorry(message);
 }
 
 function uploadImage(uri) {
@@ -50,12 +50,14 @@ function uploadImage(uri) {
 	ops.fileName = uri.substr(uri.lastIndexOf('/') + 1);
 	ops.mimeType = "image/jpeg";
 	ops.chunkedMode = false;
-	var ft = new FileTransfer();
+	var ft = new FileTransfer();	
 	ft.upload(uri, encodeURI(volService + "UploadFile"), uploadSuccess,
 			uploadFail, ops);
+	uploadTip('show');
 }
 
 function uploadSuccess(result) {
+	uploadTip('hidden');
 	var resp = result.response.substr(result.response.lastIndexOf("<string"));
 	var start = resp.indexOf(">");
 	var end = resp.lastIndexOf("</string>");
@@ -64,9 +66,20 @@ function uploadSuccess(result) {
 }
 
 function uploadFail(error) {
+	uploadTip('hidden');
 	sorry("上传文件失败!errorCode:" + error.code);
 }
 
 function insertImage(url) {
 	$("#content").val($("#content").val() + "[img src='" + url + "'/]");
+}
+
+function uploadTip(flg){
+	if(flg == 'show'){
+		$("#btn-insert").css({"display":"none"});
+		$("#btn-insert-tip").css({"display":"block"});
+	}else{
+		$("#btn-insert").css({"display":"block"});
+		$("#btn-insert-tip").css({"display":"none"});
+	}
 }
