@@ -7,6 +7,7 @@ $(function() {
         $("#time").val(d[2]);
         good(d[3]);
         $("section").html(d[3]);
+    });
 
     $("nav ul").click(function (e) {
         var tag = e.target;
