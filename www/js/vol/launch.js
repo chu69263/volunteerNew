@@ -31,6 +31,7 @@ $(function() {
             case "home": redirect("../index.html"); break;
             case "news": redirect("../nws/list.html"); break;
             case "activity": redirect("launch-activity.html"); break;
+            case "imgnew": redirect("../imgnws/list.html"); break;
             case "help": redirect("../help.html"); break;
             case "login": redirect("../login.html"); break;
         }

@@ -1,4 +1,5 @@
 needAskLogout = false;
+var imgTotal = 0;
 $(function() {
 	$("#btn-insert").click(getpic);
 	$("#btn-pre").click(preNew);
@@ -12,6 +13,10 @@ $(function() {
 		if(title === ""||content === ""){
 			sorry("请先完善新闻信息！");
 			return ;
+		}
+		if(imgTotal == 0){
+			sorry("请上传您的图片.");
+			return;
 		}
 		ajaxGet(volService + "AddNews", {
 			id : id,
@@ -63,6 +68,7 @@ function uploadSuccess(result) {
 	var end = resp.lastIndexOf("</string>");
 	var server_url = resp.substring(start + 2, end - 1);
 	insertImage(server_url);
+	imgTotal++;
 }
 
 function uploadFail(error) {
