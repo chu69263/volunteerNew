@@ -5,8 +5,8 @@ $(function() {
         $("#title").html(d[0]);
         $("#source").val(d[1]);
         $("#time").val(d[2]);
-        $("section").html(d[3].replace(/src="..\//gim, "src=\"" + fileHost));
-    });
+        good(d[3]);
+        $("section").html(d[3]);
 
     $("nav ul").click(function (e) {
         var tag = e.target;
