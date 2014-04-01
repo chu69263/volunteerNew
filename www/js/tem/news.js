@@ -1,7 +1,7 @@
 needAskLogout = false;
 var imgTotal = 0;
 $(function() {
-	$("#gb").click(goBack);
+	$("#gb").click(backClick);
 	$("#btn-insert").click(getpic);
 	$("#btn-pre").click(preNew);
 	$("#pre-content").click(hidPre);
@@ -37,7 +37,10 @@ function preNew() {
 function hidPre(){
 	$("#pre-content").css("display", "none");
 	$("#gb").unbind('click');
-	$("#gb").click(goBack);
+	$("#gb").click(backClick);
+}
+function backClick(){
+	confirm("新闻未保存,确认要退出吗?", function(btn) { btn === 1 && goBack(); }, "提 示", "是,否");
 }
 function parseContent() {
 	var h = $("#content").val();
