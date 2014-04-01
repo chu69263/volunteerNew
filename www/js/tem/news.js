@@ -3,9 +3,7 @@ var imgTotal = 0;
 $(function() {
 	$("#btn-insert").click(getpic);
 	$("#btn-pre").click(preNew);
-	$("#pre-content").click(function() {
-		this.style.display = "none";
-	});
+	$("#pre-content").click(hidPre);
 	$("#commit").click(function() {
 		var id = getUser();
 		var title = $("#txt_title").val();
@@ -32,6 +30,11 @@ $(function() {
 function preNew() {
 	$("#pre-content").css("display", "block");
 	$("#pre-content").html(parseContent());
+	$("#gb").click(hidPre);
+}
+function hidPre(){
+	$("#pre-content").css("display", "none");
+	$("#gb").click(goBack);
 }
 function parseContent() {
 	var h = $("#content").val();
