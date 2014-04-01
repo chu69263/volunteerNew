@@ -1,6 +1,7 @@
 needAskLogout = false;
 var imgTotal = 0;
 $(function() {
+	$("#gb").click(goBack);
 	$("#btn-insert").click(getpic);
 	$("#btn-pre").click(preNew);
 	$("#pre-content").click(hidPre);
@@ -30,10 +31,12 @@ $(function() {
 function preNew() {
 	$("#pre-content").css("display", "block");
 	$("#pre-content").html(parseContent());
+	$("#gb").unbind('click');
 	$("#gb").click(hidPre);
 }
 function hidPre(){
 	$("#pre-content").css("display", "none");
+	$("#gb").unbind('click');
 	$("#gb").click(goBack);
 }
 function parseContent() {
