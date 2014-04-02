@@ -2,7 +2,7 @@ article {
 	padding-bottom: 11em;
 }
 article ul img{
-	max-width: 100%;
+	width: 95%;
 	display: block;
     clear: both;
     margin: 0.5em auto 0 auto;
