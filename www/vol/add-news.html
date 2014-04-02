@@ -9,25 +9,16 @@
 <link rel="stylesheet" href="../css/tem/activity.css">
 <link rel="stylesheet" href="../css/help.css">
 <style type="text/css">
-section#pre-content {
-	width: 100%;
-	height: 100%;
-	overflow-y: auto;
-	font-size: 2.1em;
-	margin-top: 3em;
-	padding: 1.2em 1.7em;
-	background-color: #222326;
-	padding-bottom: 6em;
-	position: fixed;
-	display: none;
+#content {
+	min-height: 50px;
 }
 
-section#pre-content * {
+#content * {
 	font-size: 1em;
 }
 
-section#pre-content img {
-	max-width: 100%;
+#content img {
+	width: 95%;
 	display: block;
 	clear: both;
 	margin: 0.5em auto 0 auto;
@@ -36,35 +27,30 @@ section#pre-content img {
 <script src="../cordova.js"></script>
 <script src="../common/js/zepto.js"></script>
 <script src="../common/js/base.js"></script>
-<script src="../js/tem/news.js"></script>
+<script src="../js/vol/news.js"></script>
 </head>
 <body>
 	<header id="fixed">
 		<div id="gb">&lt;</div>
-		<h1>添加新闻</h1>
+		<h1>活动交流</h1>
 		<div></div>
 	</header>
 	<section>
 		<ul>
-			<li><span>新闻标题</span>
+			<li><span>标题</span>
 				<div>
 					<input id="txt_title" type="text">
 				</div></li>
-			<li><span>新闻内容</span>
+			<li><span>图片</span>
 				<div>
 					<button type="button" id="btn-insert">插入图片</button>
 					<button type="button" id="btn-insert-tip" style="display: none;">图片上传中..</button>
-					<br>
-					<button type="button" id="btn-pre">预览</button>
 				</div></li>
-			<li><div style="width: 100%;">
-					<textarea id="content" rows="10"></textarea>
-				</div></li>
+			<li><div id="content" style="width: 100%;"></div></li>
 		</ul>
 		<button type="button" id="commit" class="main">
 			<img src="../img/ct.png" width="30" height="25">提 交
 		</button>
 	</section>
-	<section id="pre-content"></section>
 </body>
 </html>

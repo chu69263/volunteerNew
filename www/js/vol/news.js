@@ -3,8 +3,8 @@ var imgTotal = 0;
 $(function() {
 	$("#gb").click(backClick);
 	$("#btn-insert").click(getpic);
-	$("#btn-pre").click(preNew);
-	$("#pre-content").click(hidPre);
+	// $("#btn-pre").click(preNew);
+	// $("#pre-content").click(hidPre);
 	$("#commit").click(function() {
 		var id = getUser();
 		var title = $("#txt_title").val();
@@ -43,9 +43,9 @@ function backClick(){
 	confirm("新闻未保存,确认要退出吗?", function(btn) { btn === 1 && goBack(); }, "提 示", "是,否");
 }
 function parseContent() {
-	var h = $("#content").val();
-	h = h.replace(/\[img/g, "<img").replace(/\/]/g, "/>");
-	return h;
+//	var h = $("#content").val();
+//	h = h.replace(/\[img/g, "<img").replace(/\/]/g, "/>");
+	return $("#content").html();
 }
 function getpic() {
 	nav.camera.getPicture(uploadImage, picError, {
@@ -86,7 +86,7 @@ function uploadFail(error) {
 }
 
 function insertImage(url) {
-	$("#content").val($("#content").val() + "[img src='" + url + "'/]");
+	$("#content").append($("<img>").attr("src", url));
 }
 
 function uploadTip(flg){

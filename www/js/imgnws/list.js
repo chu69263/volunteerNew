@@ -4,7 +4,7 @@ $(function() {
     ajaxGet(imgNwsService + "News", null, function(data) {
         var d = XML2JSON(data);
         for (var i = 0, arr; arr = d[i++];) {
-            ul.append("<li id='n_" + arr[0] + "'><span>" + arr[1] + "<br><span>" + arr[2] + "</span><span>&nbsp;</span></span></li>");
+            ul.append("<li id='n_" + arr[0] + "'><span>" + arr[1] + "<br><span>" + arr[2] + "</span><br><span>" + arr[3] + "</span><span>&nbsp;</span></span></li>");
         }
     });
 
