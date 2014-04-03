@@ -1,6 +1,6 @@
 needAskLogout = false;
 $(function() {
-	var ul = $("article ul").html("");
+	var ul = $("article ul");
 	ajaxGet(imgNwsService + "ImgNews", { userId: getUser() }, function(data) {
 		var d = XML2JSON(data);
 		for (var i = 0, arr; arr = d[i++];) {
