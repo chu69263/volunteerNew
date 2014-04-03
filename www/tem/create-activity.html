@@ -16,8 +16,13 @@ section ul {
 section ul li span {
 	display: block;
 	float: left;
-	margin-top:0.1em;
-	margin-right:0.2em;
+	margin-top: 0.1em;
+	margin-right: 0.2em;
+}
+
+input[type='text'],input[type='password'],select,input[type='date'],input[type='number']
+	{
+	height: 2.2em;
 }
 </style>
 <script src="../cordova.js"></script>
@@ -47,7 +52,7 @@ section ul li span {
 				</div></li>
 			<li><span>活动人数</span>
 				<div>
-					<input id="txt_people" type="text" value="10">
+					<input id="txt_people" type="number" value="10">
 				</div></li>
 			<li><span id="content-label">活动内容</span>
 				<div>
@@ -59,7 +64,7 @@ section ul li span {
 				</div></li>
 			<li><span>时长/小时</span>
 				<div>
-					<input id="txt_time" type="text" value="2">
+					<input id="txt_time" type="number" value="2">
 				</div></li>
 			<li><span>联系人</span>
 				<div>
