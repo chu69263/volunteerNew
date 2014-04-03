@@ -23,6 +23,6 @@ $(function () {
     });
     
     $("#add-news").click(function(){
-		redirect("add-news.html");
+    	redirect("news-manager.html")
 	});
 });

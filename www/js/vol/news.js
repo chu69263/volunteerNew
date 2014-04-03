@@ -23,7 +23,7 @@ $(function() {
 			content : content
 		}, function(data) {
 			var d = XML2JSON(data);
-        	d === 0 ? sorry("提交信息失败！") : (good("提交信息成功！"), redirect("info.html"));
+        	d === 0 ? sorry("提交信息失败！") : (good("提交信息成功！"), redirect("news-manager.html"));
 		}, false, "POST");
 	});
 });
