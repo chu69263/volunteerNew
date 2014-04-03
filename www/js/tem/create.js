@@ -1,5 +1,13 @@
 needAskLogout = false;
 $(function() {
+	var nowMill = new Date().getTime();
+	var dayMill = 259200000;
+	var sd = new Date().setTime(nowMill + dayMill);
+	var month = sd.getMonth() + 1;
+	month = month < 10 ? ("0" + month) : month;
+	var day = sd.getDate();
+	day = day < 10 ? ("0" + day) : day;
+	$("#txt_start_date").val(sd.getFullYear() + "-" + month + "-" + day);
 	$("#txt_start_date").on('change',function(){
 		$("#txt_end_date").val($(this).val());
 	});
@@ -13,8 +21,8 @@ $(function() {
         var address = $("#txt_address").val();
         var number = $("#txt_people").val();
         var content = $("#txt_content").val();
-        var end = $("#txt_end_date").val();
         var start = $("#txt_start_date").val();
+        var end = start;
         var hour = $("#txt_time").val();
         var contact = $("#txt_contact").val();
         var phone = $("#txt_contact_phone").val();

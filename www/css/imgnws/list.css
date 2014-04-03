@@ -1,0 +1,17 @@
+article {
+	padding-bottom: 11em;
+}
+
+article ul li span {
+	width: 100%;
+}
+article ul li span span{
+	width:100%;
+}
+
+article ul img {
+	max-width: 100%;
+	display: block;
+	clear: both;
+	margin: 0.5em auto 0 auto;
+}
