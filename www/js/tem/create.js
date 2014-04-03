@@ -2,7 +2,8 @@ needAskLogout = false;
 $(function() {
 	var nowMill = new Date().getTime();
 	var dayMill = 259200000;
-	var sd = new Date().setTime(nowMill + dayMill);
+	var sd = new Date();
+	sd.setTime(nowMill + dayMill);
 	var month = sd.getMonth() + 1;
 	month = month < 10 ? ("0" + month) : month;
 	var day = sd.getDate();

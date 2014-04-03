@@ -1,10 +1,10 @@
 needAskLogout = false;
 $(function() {
-	var ul = $("article ul");
+	var ul = $("article ul").html("");
 	ajaxGet(imgNwsService + "ImgNews", { userId: getUser() }, function(data) {
 		var d = XML2JSON(data);
 		for (var i = 0, arr; arr = d[i++];) {
-			var btn = "<button type='button' n_id='" + arr[0] + "'>删除</button>";
+			var btn = "<button type='button' n_id='" + arr[0] + "'>&times;</button>";
 			ul.append("<li><span>" + arr[1] + "<br><span>" + arr[2] + "</span></span>" + btn + "</li>");
 		}
 		ul.find("button").click(function(){
