@@ -40,7 +40,7 @@ function hidPre(){
 	$("#gb").click(backClick);
 }
 function backClick(){
-	confirm("新闻未保存,确认要退出吗?", function(btn) { btn === 1 && goBack(); }, "提 示", "是,否");
+	confirm("活动交流信息尚未保存,确认要退出吗?", function(btn) { btn === 1 && goBack(); }, "提 示", "是,否");
 }
 function parseContent() {
 //	var h = $("#content").val();

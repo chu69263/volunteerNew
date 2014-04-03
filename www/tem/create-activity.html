@@ -8,6 +8,18 @@
 <link rel="stylesheet" href="../common/css/base.css">
 <link rel="stylesheet" href="../css/tem/activities.css">
 <link rel="stylesheet" href="../css/help.css">
+<style type="text/css">
+section ul {
+	margin-bottom: 1em;
+}
+
+section ul li span {
+	display: block;
+	float: left;
+	margin-top:0.1em;
+	margin-right:0.2em;
+}
+</style>
 <script src="../cordova.js"></script>
 <script src="../common/js/zepto.js"></script>
 <script src="../common/js/base.js"></script>
@@ -17,7 +29,6 @@
 	<header id="fixed">
 		<div onClick="goBack()">&lt;</div>
 		<h1>创建活动</h1>
-		<div></div>
 	</header>
 	<section>
 		<ul>
@@ -38,9 +49,9 @@
 				<div>
 					<input id="txt_people" type="number" value="10">
 				</div></li>
-			<li><span>活动内容</span>
+			<li><span id="content-label">活动内容</span>
 				<div>
-					<textarea id="txt_content" rows="3"></textarea>
+					<textarea id="txt_content" rows="4"></textarea>
 				</div></li>
 			<li><span>活动日期</span>
 				<div>
