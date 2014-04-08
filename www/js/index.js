@@ -56,7 +56,7 @@ $(function() {
     
     ajaxGet(groupService + "List",null,function(data){
     	var d = XML2JSON(data);
-    	var guls = $("#group_list");
+    	var guls = $("#group_list").empty();
     	for(var i in d){
     		var arr = d[i];
     		guls.append($("<li>").attr("gid",arr[0]).text(arr[1]));
