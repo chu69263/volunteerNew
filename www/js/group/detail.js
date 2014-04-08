@@ -4,7 +4,7 @@ $(function() {
         var d = XML2JSON(data);
         $("#title").html(d[0]);
         $("#source").val(d[1]);
-        $("section").html(d[2]);
+        $("section").html(d[2].replace(/src="..\//gim, "src=\"" + fileHost));
     });
 
     $("nav ul").click(function (e) {
