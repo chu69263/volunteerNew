@@ -56,7 +56,7 @@
   <gap:splash gap:platform="ios" height="2008" src="res/screen/ios/screen-ipad-portrait-2x.png" width="1536" />
   <!-- Access -->
   <access origin="http://www.vasx.org" />
-  <access origin="http://ws.vasx.org" />
+  <access origin="http://web.happylearn.net" />
   <access origin="http://192.168.1.16" />
   <!-- Build -->
   <gap:platform name="ios" />

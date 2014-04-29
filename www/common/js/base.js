@@ -1,5 +1,5 @@
 window.win = window, win.doc = win.document, win.sess = win.sessionStorage, win.stag = win.localStorage;
-win.serviceHost = "http://ws.vasx.org/", win.fileHost = "http://www.vasx.org/Module/";
+win.serviceHost = "http://web.happylearn.net/", win.fileHost = "http://www.vasx.org/Module/";
 win.volService = serviceHost + "VolunteerWebService.asmx/", win.temService = serviceHost + "TeamWebService.asmx/", win.nwsService = serviceHost + "NewsWebService.asmx/",win.imgNwsService = serviceHost + "ImgNewsWebService.asmx/",win.groupService = serviceHost + "GroupWebService.asmx/", win.hlpService = serviceHost + "HelpWebService.asmx/";
 win.skinPath = fileHost + "FilesUp/UserIcon/", win.filePath = fileHost + "FilesUp/Project/";
 win.needAskExit = undefined, win.needAskLogout = undefined;
